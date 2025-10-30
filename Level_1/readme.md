@@ -99,6 +99,107 @@
 - Machine language is passed to hardware layout and the stopwatch operation is performed.
 
  <div align="center">:star::star::star::star::star::star:</div> 
+ 
+## :book: 3 : : Overview of the Opensource SoC design flow using OpenLANE
+### :zap: 3.1 : : Opensource ASIC design flow
+![3_as_in](images/3_as_in.png)
+
+#### RTL designs
+- These are the behavioral logic definition.
+- These are generally weitten in HDL(Verilog).
+- We can get opensource system/IP designs from the sources specified in the image. 
+
+#### EDA tools
+- These tools are required to analyze the RTL design and convert to GDSII.
+- Some opensource EDA tools are yosys, OpenSTA, OpenROAD, Magic.
+
+#### PDK
+- In the early stage, `IC design` was integrated to manufacturing unit.
+- To separate the `design` from `technology` PDK concept is invoked.
+- PDK signifies Process design kit provided by foundry.
+- PDK is collection of files
+  - Device models
+  - Process design rules
+  - Standard cell libraries (timing, load etc)
+- SKY130 PDK is a very popular opensource PDK for academic and research purpose.
+  - 130 nm is the feature size for physical design.
+  - It is old but supports enough fast design (around 1 GHz if properly designed) for research purpose.
+
+---
+
+### :zap: 3.2 : : RTL to GDSII flow
+![3_r2g](images/3_r2g.png)
+
+#### Synthesis
+- Map standard cells from SCL for RTL design components and generate netlist.
+- SCL is the standard cell library provided by pdk.
+- Opensource tool: Yosys.
+#### Floorplan and Power planning
+- Create die and core as per cell requirement (netlist).
+- Place Macros.
+- PDN(Power distribution network) is generated.
+- I/O pins are placed.
+- Opensource tool: OpenROAD and magic.
+#### Place
+- Standard cells are placed in core.
+- Detailed placement and optimization.
+- Opensource tool: OpenROAD and magic.
+#### Clock Tree Synthesis
+- Clock network (clock buffers are placed).
+- Opensource tool: TritonCTS and magic.
+#### Route
+- Cells are connected to each other (routing) and optimization in routing.
+- Metal layers for routing.
+- Opensource tool: TritonROUTE and magic.
+- SKY130 PDK uses 6 metal layers. 
+  - Lowest layer as `Local interconnect` and made of TiN.
+  - Other five layers are made of aluminium.
+
+![3_r2g_rt](images/3_r2g_rt)
+
+#### Signoff
+- Physical verification (DRC, LVS).
+- Timing verification (STA).
+- Opensource tool: OpenSTA, magic.
+
+---
+
+### :zap: 3.3 : : OpenLANE ASIC design flow
+![3_ol_o](images/3_ol_o.png)
+
+- Problems with opensource EDA tools was-
+  - Tool qualification
+  - Tool callibration
+  - Missing tools
+- To avoid this `OpenLANE`, a open source flow integrating different open source tools for tapeout experiment is designed.
+- `striVe chipsets` are designed using the OpenLANE flow.
+
+#### OpenLANE flow Characteristics
+- Produce clean GDSII with no human in the loop.
+- Clean means
+ - LVS clean
+ - DRC clean
+ - Timing clean !! (Work in progress)
+
+- Tuned for SKY130 PDK
+- Two modes of operation
+  - Autonomous
+  - Interactive
+- Design space exploration to find best set of flow
+- Large number of design examples
+#### Logic euivalence check (LEC)
+- If netlist modified then verification is very important to check the required logic / function.
+- PostCTS, PostRouting it is very important.
+#### Fake antenna diodes insertion and swapping
+- Why antenna rule violation occurs?
+![3_an_1](images/3_an_1.png)
+- Solution to Antenna rule violation.
+![3_an_2](images/3_an_2.png)
+- Why fake cell insertion and swapping is important?
+![3_an_3](images/3_an_3.png)
+
+ 
+ <div align="center">:star::star::star::star::star::star:</div> 
 
  ## :trophy: Level Status: 
 
