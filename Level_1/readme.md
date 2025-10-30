@@ -33,12 +33,12 @@
 ### :zap: 1.2 : : Packaging
 :rocket: Packaging means shielding the chip from external things and give proper and reliavle interfacing.
 
-![1_sc_pc_1](images/1_sc_pc_1.png)
+![1_sc_ph_1](images/1_sc_pc_1.png)
 
 - It is a `QFN 48` package. QFN signifies Quad flat no leads.
 - The chip is inside it. And the package leads are connected to the chip pins with `wire bound`. This is shown below.
    
-![1_sc_pc_2](images/1_sc_pc_2.png)
+![1_sc_ph_2](images/1_sc_pc_2.png)
 
 ---
 
@@ -79,7 +79,7 @@
 ---
 
 ### :zap: 2.2 : : Software applications to hardware
-![2_s2h_1](images/2_s2h_1.png)
+![2_s2h_1](images/1_s2h_1.png)
 
 - In the above image we can see the communication interface between application software and hardware through system software.
 - Computers only understand binary format data.
@@ -91,7 +91,7 @@
 - HDL (Verilog) helps to define ISA to hardware in RTL level.
 
 
-![2_s2h_2](images/2_s2h_2.png)
+![2_s2h_2](images/1_s2h_2.png)
 
 - In the above figure a stopwatch application software is written in C language (any high level programming language).
 - Then this C program is converted to assembly language using compiler.
@@ -155,7 +155,7 @@
   - Lowest layer as `Local interconnect` and made of TiN.
   - Other five layers are made of aluminium.
 
-![3_r2g_rt](images/3_r2g_rt)
+![3_r2g_rt](images/3_r2g_rt.png)
 
 #### Signoff
 - Physical verification (DRC, LVS).
