@@ -291,7 +291,10 @@ $ run_synthesis
 - Total no. of cells -> 14876
 - No. of flop cells -> 1613
 
+---
 $$\text{Flop Ratio} = \frac{\text{No. of flop cells}}{\text{Total no. of cells}}$$ = 0.1084
+
+---
 
 - Higher flop ratio signifies digital system heavily relies on sequential logic.
 
