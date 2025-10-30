@@ -270,12 +270,39 @@ $ prep -design picorv32a
 
  <div align="center">:star::star::star::star::star::star:</div> 
 
+## :microscope: 6 : : Synthesize picorv32a using openlane flow and calculate flop ratio
+### :zap: 6.1 : : After preparing the design we can run the synthesis-
+```bash
+$ run_synthesis
+```
+- It will perform logic optimization and cell mapping using Yosys and Abc.
+- Timing analysis using opensta is also performed.
+- The synthesized netlist result is stored in `~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/30-10_21-09/results/synthesis` in this directory as `picorv32a.synthesis.v`.
+- The synthesis reports and post-synthesis timing analysis reports are stored in `~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/30-10_21-09/reports/synthesis` .
+
+#### Start synthesis
+![6_st](images/6_st.png)
+#### Finish synthesis
+![6_en](images/6_en.png)
+
+### :zap: 6.2 : : Analyze synthesis reports and calulate flop ratio-
+![6_rpt](images/6_rpt.png)
+
+- Total no. of cells -> 14876
+- No. of flop cells -> 1613
+
+$$\text{Flop Ratio} = \frac{\text{No. of flop cells}}{\text{Total no. of cells}}$$ = 0.1084
+
+- Higher flop ratio signifies digital system heavily relies on sequential logic.
+
+
+ <div align="center">:star::star::star::star::star::star:</div> 
  
 
  ## :trophy: Level Status: 
 
 - All objectives completed.
-- I have synthesized VSDBabySoC design, performed GLS Simulation and validated GLS with respect to functional simulation.
+- I have learned hardware software interfacing, overview of openlane flow, synthesis, flop ratio.
 - 🔓 Next level unlocked 🔜 [Level-2: Good Floorplan vs Bad Floorplan and introduction to library cells](../Level_2/readme.md).
   
 <div align="center">:star::star::star::star::star::star:</div> 
