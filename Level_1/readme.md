@@ -192,10 +192,15 @@
 - PostCTS, PostRouting it is very important.
 #### Fake antenna diodes insertion and swapping
 - Why antenna rule violation occurs?
+  
 ![3_an_1](images/3_an_1.png)
+
 - Solution to Antenna rule violation.
+  
 ![3_an_2](images/3_an_2.png)
+
 - Why fake cell insertion and swapping is important?
+  
 ![3_an_3](images/3_an_3.png)
 
  
