@@ -10,7 +10,8 @@
 
 <div align="center">:star::star::star::star::star::star:</div> 
 
-# Level-5: Fundamentals of Static Timing Analysis (STA)
+# Level-5: Final steps for RTL2GDS using TritonRoute and OpenSTA
+
 
 ## List of Objectives
 
