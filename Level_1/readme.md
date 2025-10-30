@@ -292,9 +292,9 @@ $ run_synthesis
 - No. of flop cells -> 1613
 
 ---
- <div align="center">
+
 $$\text{Flop Ratio} = \frac{\text{No. of flop cells}}{\text{Total no. of cells}}$$ = 0.1084
- </div>
+
 
 ---
 
