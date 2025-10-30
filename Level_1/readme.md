@@ -33,12 +33,12 @@
 ### :zap: 1.2 : : Packaging
 :rocket: Packaging means shielding the chip from external things and give proper and reliavle interfacing.
 
-![1_sc_ph_1](images/1_sc_pc_1.png)
+![1_sc_ph_1](images/1_sc_ph_1.png)
 
 - It is a `QFN 48` package. QFN signifies Quad flat no leads.
 - The chip is inside it. And the package leads are connected to the chip pins with `wire bound`. This is shown below.
    
-![1_sc_ph_2](images/1_sc_pc_2.png)
+![1_sc_ph_2](images/1_sc_ph_2.png)
 
 ---
 
