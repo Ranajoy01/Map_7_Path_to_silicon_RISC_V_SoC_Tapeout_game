@@ -10,7 +10,8 @@
 
 <div align="center">:star::star::star::star::star::star:</div> 
 
-# Level-2: Fundamentals of Static Timing Analysis (STA)
+# Level-2: Good Floorplan vs Bad Floorplan and introduction to library cells
+
 
 ## List of Objectives
 
@@ -26,7 +27,7 @@
 
 - All objectives completed.
 - I have learned about timing paths ,timing graph, setup and hold analysis, slack, critical path, interpretetion of timing report ,variation in real case.
-- 🔓 Next level unlocked 🔜 [Level-3: Generate static timing analysis report of VSDBabySoC (post synthesis) and describe the report](../Level_3/readme.md).
+- 🔓 Next level unlocked 🔜 [Level-3: Design Library cell using Magic Layout and ngspice characterization](../Level_3/readme.md).
   
 <div align="center">:star::star::star::star::star::star:</div> 
 
