@@ -223,6 +223,53 @@ $ cd pdks & ls -ltr
 
  <div align="center">:star::star::star::star::star::star:</div> 
 
+## :microscope: 5 : : Invoke openlane flow
+### :zap: 5.1 : : As I have changed the username `vsduser` to `ranajoy01` for Ubuntu VM so change $PDK_ROOT (Do this for one time only)
+- Open ~/bash.rc file and change `vsduser` to `$USER` (takes the current username) in $PDK_ROOT
+```bash
+# open
+$ gvim ~/.bashrc
+```
+![5_pr](images/5_pr.png)
+
+- Here we can see that alias `docker` is defined for "docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) efabless/openlane:v0.21"
+ - Openlane uses many open source tools. If we download all separately then the enviornment will become unstable due to version issues.
+ - To avoid unstability docker is used . It produce another shell inside VM.
+ - Docker contains all the tools for Openlane.
+ - Here `efabless/openlane:v0.21` docker image is used.
+
+### :zap: 5.2 : : Start openlane flow
+#### Step-1:Go to `openlane` directory-
+```bash
+$ cd ~/Desktop/work/tools/openlane_working_dir/openlane/
+```
+#### Step-2:Start docker shell-
+```bash
+$ docker
+```
+![5_s2](images/5_s2.png)
+#### Step-3:Start interactive flow-
+```bash
+$ ./flow.tcl -interactive
+```
+![5_s3](images/5_s3.png)
+#### Step-4:Package specify-
+```bash
+$ package require openlane 0.9
+```
+![5_s4](images/5_s4.png)
+
+### :zap: 5.3 : :  Prepare design (example picorv32a)
+```bash
+$ prep -design picorv32a
+```
+![5_pd](images/5_pd.png)
+
+- This command also generate `run` directory in `~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a` directory.(If not present already)
+- LEF (library exchange format) are merged.
+
+ <div align="center">:star::star::star::star::star::star:</div> 
+
  
 
  ## :trophy: Level Status: 
