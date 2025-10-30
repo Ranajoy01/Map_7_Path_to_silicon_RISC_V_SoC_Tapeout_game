@@ -206,6 +206,25 @@
  
  <div align="center">:star::star::star::star::star::star:</div> 
 
+## :microscope: 4 : : Explore work directory for openlane
+### :zap: 4.1 : : Go inside the work directory and check PDKs
+```bash
+$ cd ~/Desktop/work/tools/openlane_working_dir & ls -ltr
+$ cd pdks & ls -ltr
+```
+![4_dir](images/4_dir.png)
+
+- Here in the `openlane_working_dir` directory there are three subdirectories-
+  - `openlane` is the directory where we will invoke openlane flow.
+- Here we can observe there are three subdirectories inside `pdks` directory
+  - `skywater-pdk` is provided by foundry and it is not work on opensource tools.
+  - `open_pdks` convert `skywater-pdk` files for using in opensource tools.
+  - converted files are in `sky130A` directory.
+
+ <div align="center">:star::star::star::star::star::star:</div> 
+
+ 
+
  ## :trophy: Level Status: 
 
 - All objectives completed.
