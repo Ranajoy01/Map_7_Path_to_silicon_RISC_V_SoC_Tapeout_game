@@ -28,6 +28,8 @@
 
 ![1_sc_bl](images/1_sc_bl.png)
 
+---
+
 ### :zap: 1.2 : : Packaging
 :rocket: Packaging means shielding the chip from external things and give proper and reliavle interfacing.
 
@@ -38,7 +40,10 @@
    
 ![1_sc_pc_2](images/1_sc_pc_2.png)
 
+---
+
 ### :zap: 1.3 : : Basic terms related to Physical SoC chip 
+
 
 ![1_sc_ph_1](images/1_sc_ph_1.png)
 
@@ -63,6 +68,35 @@
 - Having specific functionality.
 - Macros (RISC-V SoC, SPI).
 
+ <div align="center">:star::star::star::star::star::star:</div> 
+
+## :book: 2 : : Hardware and software interfacing and ISA (RISC-V)
+### :zap: 2.1 : : Introduction to ISA 
+- ISA signifies instruction set architechture.
+- It is the interface between hardware and software.
+- `RISC-V` ISA is the open source ISA.
+
+---
+
+### :zap: 2.2 : : Software applications to hardware
+![2_s2h_1](images/2_s2h_1.png)
+
+- In the above image we can see the communication interface between application software and hardware through system software.
+- Computers only understand binary format data.
+- This binary data goes to SoC core layout and perform specific task based on transistors on / off.
+- ISA specifies which combination of binary bits for which operation.
+- Suppose `add r1 r1 r2' is an instruction in assembly language after compilation.
+- Assembler (based on ISA) is converted to binary bits combinbination and passed to hardware (chip layout).
+- ISA is abstract interface between application software and hardware.
+- HDL (Verilog) helps to define ISA to hardware in RTL level.
+
+
+![2_s2h_2](images/2_s2h_2.png)
+
+- In the above figure a stopwatch application software is written in C language (any high level programming language).
+- Then this C program is converted to assembly language using compiler.
+- Then the assembler convert this to machine language.
+- Machine language is passed to hardware layout and the stopwatch operation is performed.
 
  <div align="center">:star::star::star::star::star::star:</div> 
 
