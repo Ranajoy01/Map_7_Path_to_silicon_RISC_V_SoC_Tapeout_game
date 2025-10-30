@@ -15,7 +15,7 @@
   
  <div align="center">:star::star::star::star::star::star:</div> 
 
-## :book:  : 1 : SoC packaging and basic terms related to physical SoC chip
+## :book:  : : 1 : : SoC packaging and basic terms related to physical SoC chip
 :rocket: Let's start with a development board (e.g.- Arduino, RasberryPi, Vsdsquadron etc) as the bigger picture for SoC application.
 ![]
 
