@@ -247,7 +247,7 @@ $ magic -T ~/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magi
 ## :trophy: Level Status: 
 
 - All objectives completed.
-- I have learned about timing paths ,timing graph, setup and hold analysis, slack, critical path, interpretetion of timing report ,variation in real case.
+- I have learned about floorplan, placement using OpenLANE flow and importance of library cells.
 - 🔓 Next level unlocked 🔜 [Level-3: Design Library cell using Magic Layout and ngspice characterization](../Level_3/readme.md).
   
 <div align="center">:star::star::star::star::star::star:</div> 
