@@ -149,6 +149,68 @@ $$
 
 <div align="center">:star::star::star::star::star::star:</div> 
 
+## :microscope: 2 : : Placement and importance of library characterization and modeling
+### :zap: 2.1 : : Introduction to placement
+#### Importance of placement
+- Global placement
+  - Map standard cell layout from library for the cells present in netlist
+  - As per the distance from I/O pins or nets cells are roughly placed over the core
+  - Cells may overlap with eachother
+- Detailed placement
+  - Legalize the cell location 
+  - In specific row and site cells are placed
+  - No overlap with eachother
+  - Datapath buffers (as repeater) are added for longer distance between two cells
+  - Optimization for wire distance is performed
+  - HPWL (Half parameter wire length) is very important placement metric
+  
+### :zap: 2.2 : : Placement for picorv32a design
+#### command and logs
+```bash
+$ run_placement
+```
+- If overflow reduces with the increase in iteration then the placemnt will be converged
+
+##### Global placement log
+![2_lg1](images/2_lg1.png)
+##### Detailed placement log
+![2_lg2](images/2_lg2.png)
+
+- Def file is generated `~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/31-10_13-05/results/placement/picorv32a.placement.def` 
+
+---
+
+### :zap: 2.3 : : Load the generated def (design exchange format) file in magic and visualize placement layout 
+#### Command and log
+```bash
+$ magic -T ~/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/31-10_13-05/tmp/merged.lef def read ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/31-10_13-05/results/placement/picorv32a.placement.def &
+```
+![2_pl_lg](images/2_pl_lg.png)
+
+- tech file, lef file and def files are provided to magic
+- & at the last specify that end prompt after opening layout in magic
+
+#### Placement Layout
+![2_pl_lt](images/2_pl_lt.png)
+
+- picorv32a placement layout is visualized
+- A command shell also opened
+
+##### Legal standard cell placemnt in layout
+![2_pl_lt1](images/2_pl_lt1.png)
+##### Datapath repeater placement
+![2_pl_lt2](images/2_pl_lt2.png)
+
+### :zap: 2.4 : : Importance of library characterization and modeling
+#### What is the common thing required in ASIC design flow?
+- Gates or cells
+#### Why characterization and modeling of library
+- Library is the collection of cell
+ - Different type of cell
+ - Same cell with different size for different speed
+ - Timing characterization
+- We can interpret cells using notations but the EDA tools require specific cell model and characterization style to interpret. 
+
 <div align="center">:star::star::star::star::star::star:</div> 
 
 ## :trophy: Level Status: 
