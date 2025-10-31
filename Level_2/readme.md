@@ -62,9 +62,9 @@ $ magic -T ~/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magi
 
 #### Utilization factor and aspect ratio 
 - Priority order (highest first) of the configuration files are shown below
-   - 1) ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/sky130A_sky130_fd_sc_hd_config.tcl
-   - 2) ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/config.tcl
-   - 3) ~/Desktop/work/tools/openlane_working_dir/openlane/configuration/floorplan.tcl
+   -  ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/sky130A_sky130_fd_sc_hd_config.tcl
+   -  ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/config.tcl
+   -  ~/Desktop/work/tools/openlane_working_dir/openlane/configuration/floorplan.tcl
 
 - In the file-3 we see that
 
@@ -73,9 +73,13 @@ $ magic -T ~/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magi
 
 ![1_hpr_1](images/1_hpr_1.png)
 
+---
+
 $$
 \text{Utilization Factor} = \frac{\text{Area of all netlist cells}}{\text{Area of core}}
 $$
+
+---
 
 - Utilization = 50 %
 - Aspect ratio =1 (Width and height same, square shape)
@@ -142,6 +146,8 @@ $$
 #### Tap cells in floorplan layout
 ![1_fp6](images/1_fp6.png)
 
+
+<div align="center">:star::star::star::star::star::star:</div> 
 
 <div align="center">:star::star::star::star::star::star:</div> 
 
