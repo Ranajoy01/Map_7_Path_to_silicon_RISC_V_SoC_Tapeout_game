@@ -19,6 +19,7 @@
 
   
 <div align="center">:star::star::star::star::star::star:</div> 
+
 ## :microscope: 1 : : `picorv32a` chip floorplanning and related terms
 ### :zap: 1.1 : : Run floorplan using openlane flow
 - In openlane flow after synthesizing the design, we can perform floorplan. Synthesis is done in the previous level. Now run floorplan using the following command in docker shell-
