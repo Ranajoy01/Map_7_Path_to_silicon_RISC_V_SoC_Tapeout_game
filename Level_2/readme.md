@@ -216,6 +216,34 @@ $ magic -T ~/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magi
 
 <div align="center">:star::star::star::star::star::star:</div> 
 
+## :book: 3 : : Cell design flow
+### :zap: 3.1 : : (Step -1) Input
+- PDKs (lambda based design)
+- DRC and LVS rules
+- Library and user defined specification
+  - Cell height (Based on row distance and power rail)
+  - Pin layer
+  - Supply voltage
+- Spice models (Id, Vth)  
+### :zap: 3.2 : : (Step -2) Design
+- Circuit design (O/P : CDL)
+- Layout design (O/P : GDSII, LEF , parasitics in spice)
+  - Euler's path
+  - Stick diagram
+  - Take widths based on switching threshold requirement
+-   
+### :zap: 3.3 : : (Step -3) Characterization
+:rocket: GUNA software is used for characterization.
+- Timing characterization
+  - Timing threshold
+  - Propagation delay
+  - Transistion time
+- Power characterization
+- Noise characterization
+
+<div align="center">:star::star::star::star::star::star:</div> 
+
+
 ## :trophy: Level Status: 
 
 - All objectives completed.
