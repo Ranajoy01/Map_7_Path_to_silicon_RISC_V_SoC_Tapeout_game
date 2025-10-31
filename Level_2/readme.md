@@ -231,7 +231,7 @@ $ magic -T ~/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magi
   - Euler's path
   - Stick diagram
   - Take widths based on switching threshold requirement
--   
+   
 ### :zap: 3.3 : : (Step -3) Characterization
 :rocket: GUNA software is used for characterization.
 - Timing characterization
