@@ -72,11 +72,11 @@ $ magic -T ~/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magi
 - In the file-1 we see that
 
 ![1_hpr_1](images/1_hpr_1.png)
-- <p align="center">
+
 $$
 \text{Utilization Factor} = \frac{\text{Area of all netlist cells}}{\text{Area of core}}
 $$
- </p>
+
 - Utilization = 50 %
 - Aspect ratio =1 (Width and height same, square shape)
 - Vertical metal layer fo I/O = 3 (actually one more than the specified value)
