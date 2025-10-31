@@ -135,9 +135,12 @@ $$
 
 - Pins are placed in equal distance from eachother
 - Vertical pins in metal layer 2
+- 
 ![1_fp51](images/1_fp51.png)
 - Horizontal pins in metal layer 3
+  
 ![1_fp52](images/1_fp52.png)
+
 ---
 ### :zap: 1.8 : : (Floorplan Operation-6) Tapcell placement
 #### Importance of tapcell
