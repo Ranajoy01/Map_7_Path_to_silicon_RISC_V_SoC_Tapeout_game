@@ -40,8 +40,10 @@ magic -T ./libs/sky130A.tech sky130_inv.mag &
 #### 5.5) PMOS source to Vpwr check-
 ![55](images/55.png)
 
+<div align="center">:star::star::star::star::star::star:</div> 
+
 ## :zap: CMOS inverter layout design process reference and DRC check
-#### 1) Go through the [vsdstdcelldesign repository readme file](https://github.com/nickson-jose/vsdstdcelldesign) to understand the layout design process
+### 1) Go through the [vsdstdcelldesign repository readme file](https://github.com/nickson-jose/vsdstdcelldesign) to understand the layout design process
 - Generally 16 mask CMOS fabrication process is used.
 - Importance of different layers
    - pwell
@@ -50,7 +52,7 @@ magic -T ./libs/sky130A.tech sky130_inv.mag &
    - local interconnect
    - contact (cross marked region)
    - diffusion region
-#### 2) DRC check
+### 2) DRC check
 - Magic tool is very much dependent on design rule check
 - Now delete a portion of layer to observe DRC error-
   
@@ -58,6 +60,23 @@ magic -T ./libs/sky130A.tech sky130_inv.mag &
 
 ![drc_er](images/drc_er.png)
   
+<div align="center">:star::star::star::star::star::star:</div> 
+
+## :zap: Extract spice netlist for custom inverter-
+### 1) Commands used
+```bash
+# Generate .ext file from layout
+extract all
+# Consider parasitics
+ext2spice cthres 0 rthres 0
+# Convert .ext to .spice
+ext2spice
+```
+### 2) Command log
+![log2](images/log2.png)
+### 3) Generated netlist-
+![ext2sp](images/ext2sp.png)
+
 <div align="center">:star::star::star::star::star::star:</div> 
 
 ## :trophy: Level Status: 
