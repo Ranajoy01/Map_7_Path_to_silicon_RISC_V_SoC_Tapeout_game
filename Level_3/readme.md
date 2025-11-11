@@ -133,7 +133,7 @@ ngspice sky130_inv.spice
 plot y vs time a
 ```
 #### Log
-[cell_ptl](images/cell_ptl.png)
+![cell_ptl](images/cell_ptl.png)
 ##### Plot
 ![cell_pt](images/cell_pt.png)
 ### 2) Timing characterizaation
