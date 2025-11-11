@@ -132,8 +132,23 @@ run
 ngspice sky130_inv.spice
 plot y vs time a
 ```
+#### Log
+[cell_ptl](images/cell_ptl.png)
+##### Plot
 ![cell_pt](images/cell_pt.png)
 ### 2) Timing characterizaation
+#### Threshold characterization for input
+
+|Threshold name|Voltage level in percentage|Voltage level based on 3.3 V|Threshold value|
+|---|---|---|---|
+|Slew Low Fall threshold|20%|0.66V||
+|Slew high Fall threshold|20%|0.66V||
+|Slew Low Rise threshold|80%|2.64V||
+|Slew Low Rise threshold|80%|2.64V||
+|In Rise threshold|50%|1.65V||
+|In Fall threshold|50%|1.65V||
+
+#### Threshold characterization for output
 <div align="center">:star::star::star::star::star::star:</div>
 
 ## :trophy: Level Status: 
