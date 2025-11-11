@@ -75,9 +75,11 @@ $ set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
 $ add_lefs -src $lefs
 //extra lines end for include custom inverter
 $ run_synthesis
-
 ```
-
+#### sky130_vsdinv is used during synthesis
+![cin_1](images/cin_1.png)
+#### Post synthesis timing analysis
+![cin_2](images/cin_2.png)
 <div align="center">:star::star::star::star::star::star:</div> 
 
 ## :trophy: Level Status: 
