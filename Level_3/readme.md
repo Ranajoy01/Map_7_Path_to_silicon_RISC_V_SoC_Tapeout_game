@@ -137,18 +137,24 @@ plot y vs time a
 ##### Plot
 ![cell_pt](images/cell_pt.png)
 ### 2) Timing characterizaation
-#### Threshold characterization for input
+#### Threshold characterization 
 
-|Threshold name|Voltage level in percentage|Voltage level based on 3.3 V|Threshold value|
+|Threshold name|Voltage level in percentage|Voltage level based on 3.3 V
 |---|---|---|---|
-|Slew Low Fall threshold|20%|0.66V||
-|Slew high Fall threshold|20%|0.66V||
-|Slew Low Rise threshold|80%|2.64V||
-|Slew Low Rise threshold|80%|2.64V||
-|In Rise threshold|50%|1.65V||
-|In Fall threshold|50%|1.65V||
+|Slew Low Fall threshold|20%|0.66V
+|Slew high Fall threshold|20%|0.66V
+|Slew Low Rise threshold|80%|2.64V
+|Slew high Rise threshold|80%|2.64V
+|Rise threshold|50%|1.65V|0.05ns
+|Fall threshold|50%|1.65V|0.05ns
 
-#### Threshold characterization for output
+*** The time at the threshold voltage level is required.
+
+#### Rise time cell delay= output rise to 50 % - input fall to 50% = 6.1798ns - 6.150 ns= 0.0298ns
+![rs_cell](images/rs_cell.png)
+#### Fall time cell delay= output fall to 50 % - input rise to 50% = 8.05325ns - 8.050ns= 0.00325ns
+![fl_cell](images/fl_cell.png)
+
 <div align="center">:star::star::star::star::star::star:</div>
 
 ## :trophy: Level Status: 
