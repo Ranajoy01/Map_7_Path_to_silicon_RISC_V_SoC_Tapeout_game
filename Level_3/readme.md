@@ -53,8 +53,10 @@ magic -T ./libs/sky130A.tech sky130_inv.mag &
 #### 2) DRC check
 - Magic tool is very much dependent on design rule check
 - Now delete a portion of layer to observe DRC error-
+  
 ``` Select box using mouse and click the scroll wheel```
-[drc_er](images/drc_er.png)
+
+![drc_er](images/drc_er.png)
   
 <div align="center">:star::star::star::star::star::star:</div> 
 
