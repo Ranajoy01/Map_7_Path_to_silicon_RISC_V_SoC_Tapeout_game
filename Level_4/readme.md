@@ -32,10 +32,39 @@ grid 0.46um 0.34um 0.23um 0.17um
 #### Cell layout condition for use in the PVT corner
 #### A) Ports should be in the cross section of horizontal and vertical track to be considered as pins and properly routed
 ![cn_1](images/cn_1.png)
-#### B) Cell width should be odd multiple of X pitch
+
+---
 ![cn_2](images/cn_2.png)
+#### B) Cell width should be odd multiple of X pitch
+- Consider the inner white rectangle
+- Width of this is 3 grid box
 #### C) Cell height should be odd multiple of Y pitch
-![cn_3](images/cn_3.png)
+- Consider the inner white rectangle
+- Height of this is 8 grid box
+
+### 2) Generate lef file
+```
+save sky130_vsdinv.mag
+lef write
+```
+![lef](images/lef.png)
+
+### 3) Add lef file and library files in `~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src`
+### 4) Add these commands to config.tcl file
+```
+set ::env(LIB_SYNTH) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__typical.lib"
+set ::env(LIB_FASTEST) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__fast.lib"
+set ::env(LIB_SLOWEST) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__slow.lib"
+set ::env(LIB_TYPICAL) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__typical.lib"
+
+set ::env(EXTRA_LEFS) [glob $::env(OPENLANE_ROOT)/designs/$::env(DESIGN_NAME)/src/*.lef]
+```
+#### Previous
+![prec](images/prec.png)
+#### After adding these
+![postc](images/postc.png)
+
+
 
 <div align="center">:star::star::star::star::star::star:</div> 
 
