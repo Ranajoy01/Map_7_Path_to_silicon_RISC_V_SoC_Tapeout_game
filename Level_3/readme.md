@@ -79,6 +79,63 @@ ext2spice
 
 <div align="center">:star::star::star::star::star::star:</div> 
 
+## :zap: CMOS inverter cell ngspice simulation and characterization
+### 1) Modify the generated spice file to use it for characterization
+Grid smallest box dimension= 0.010 micron
+
+![sm_bx](images/sm_bx.png)
+
+#### Edit netlist
+
+```
+* SPICE3 file created from sky130_inv.ext - technology: sky130A
+///////// //M represent  next line is modified
+// M
+.option scale=0.010u
+//M
+.include ./libs/pshort.lib
+//M
+.include ./libs/nshort.lib
+
+//M
+//.subckt sky130_inv A Y VPWR VGND
+//M
+M1000 Y A VGND VGND nshort_model.0 w=35 l=23
++  ad=1.44n pd=0.152m as=1.37n ps=0.148m
+//M
+M1001 Y A VPWR VPWR pshort_model.0  w=37 l=23
++  ad=1.44n pd=0.152m as=1.52n ps=0.156m
+//M
+VDD VPWR 0 3.3v
+//M
+VSS VGND 0 0V
+//M
+Va A VGND PULSE(0 3.3v 0 0.1ns 0.1ns 2ns 4ns)
+C0 A VPWR 0.0774f
+C1 Y A 0.0754f
+C2 Y VPWR 0.117f
+C3 Y VGND 0.279f
+C4 A VGND 0.45f
+C5 VPWR VGND 0.781f
+//M
+//.ends
+//M
+.tran 1n 20n
+//M
+.control
+run
+.endc
+.end
+```
+#### Ngspice simulation
+```
+ngspice sky130_inv.spice
+plot y vs time a
+```
+![cell_pt](images/cell_pt.png)
+### 2) Timing characterizaation
+<div align="center">:star::star::star::star::star::star:</div>
+
 ## :trophy: Level Status: 
 
 - All objectives completed.
