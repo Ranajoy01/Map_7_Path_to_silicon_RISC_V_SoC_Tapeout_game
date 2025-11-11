@@ -160,7 +160,6 @@ plot y vs time a
 ## :trophy: Level Status: 
 
 - All objectives completed.
-- I have learned about timing paths ,timing graph, setup and hold analysis, slack, critical path, interpretetion of timing report ,variation in real case.
 - 🔓 Next level unlocked 🔜 [Level-4: Pre-layout timing analysis and importance of good clock tree](../Level_4/readme.md).
   
 <div align="center">:star::star::star::star::star::star:</div> 
