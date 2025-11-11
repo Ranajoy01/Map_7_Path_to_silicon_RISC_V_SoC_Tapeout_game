@@ -64,7 +64,19 @@ set ::env(EXTRA_LEFS) [glob $::env(OPENLANE_ROOT)/designs/$::env(DESIGN_NAME)/sr
 #### After adding these
 ![postc](images/postc.png)
 
+### 5) Use some extra line of codes for using custom cell in openlane flow
+```
+$ docker
+$ ./flow.tcl -interactive
+$ package require openlane 0.9
+$ prep -design picorv32a
+//extra lines start for include custom inverter
+$ set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+$ add_lefs -src $lefs
+//extra lines end for include custom inverter
+$ run_synthesis
 
+```
 
 <div align="center">:star::star::star::star::star::star:</div> 
 
